@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.function.Supplier;
 
 @Data
-public class InternalServerErrorException  extends Exception implements Supplier<InternalServerErrorException> {
+public class InternalServerErrorException extends RuntimeException implements Supplier<InternalServerErrorException> {
 
     String message;
 

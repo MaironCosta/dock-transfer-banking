@@ -53,6 +53,20 @@ spring:
     activate:
       on-profile: docker
 
+  datasource:
+    url: jdbc:postgresql://postgres:5432/dock
+    username: dock
+    password: test1234
+    driverClassName: org.postgresql.Driver
+
+  jpa:
+    defer-datasource-initialization: true
+    show-sql: true
+  sql:
+    init:
+      mode: always
+      platform: postgres
+
 redis:
   host: redis
   port: 6379

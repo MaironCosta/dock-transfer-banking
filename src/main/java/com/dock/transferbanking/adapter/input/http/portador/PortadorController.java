@@ -41,7 +41,7 @@ public class PortadorController {
 
     @ResponseStatus(HttpStatus.ACCEPTED)
     @ResponseBody
-    @DeleteMapping(path = {"/v1/{id}"}, produces = MediaType.APPLICATION_JSON_VALUE)
+    @DeleteMapping(path = {"/v1/{id}/", "/v1/{id}"}, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseHTTP remove (@PathVariable Long id) throws InternalServerErrorException, NotFoundException {
 
         portadorUserCase.remove(id);

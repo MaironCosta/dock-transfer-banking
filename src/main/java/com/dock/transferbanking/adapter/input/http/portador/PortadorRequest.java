@@ -8,8 +8,7 @@ public record PortadorRequest (
         @JsonProperty(value = "nome")String nome,
         @JsonProperty(value = "cpf") String cpf) {
 
-    PortadorDomain toPortadorDomain() {
-        PortadorDomain portadorDomain = new PortadorDomain(nome, cpf);
-        return portadorDomain;
+    public PortadorDomain toPortadorDomain() {
+        return new PortadorDomain(nome, cpf);
     }
 }

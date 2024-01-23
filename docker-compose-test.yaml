@@ -30,12 +30,12 @@ services:
     image: postgres
     restart: always
     environment:
-      - POSTGRES_USER=petshop-dock
+      - POSTGRES_USER=dock
       - POSTGRES_PASSWORD=test1234
       - POSTGRES_DB=dock
     volumes:
       - /tmp/postgres-volume:/data/db
-      - ./configuration/db/:/docker-entrypoint-initdb.d
+      - ./config/db/:/docker-entrypoint-initdb.d
     ports:
       - "5432:5432"
     expose:
